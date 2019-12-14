@@ -3,12 +3,41 @@ module.exports = () => {
 
   router.get('/', (req, res) => {
     res.status(200).json({
-      message: 'handling GET reqs for /orders'
+      message: 'orders were fetched'
     });
   });
+
   router.post('/', (req, res) => {
+    res.status(201).json({
+      message: 'order was created'
+    });
+  });
+
+  router.get('/:orderID', (req, res) => {
     res.status(200).json({
-      message: 'handling POST reqs for /orders'
+      message: 'order details',
+      orderID: req.params.orderID
+    });
+  });
+
+  router.patch('/:orderID', (req, res) => {
+    res.status(200).json({
+      message: 'order updated',
+      orderID: req.params.orderID
+    });
+  });
+
+  router.put('/:orderID', (req, res) => {
+    res.status(200).json({
+      message: 'order replaced',
+      orderID: req.params.orderID
+    });
+  });
+
+  router.delete('/:orderID', (req, res) => {
+    res.status(200).json({
+      message: 'order deleted',
+      orderID: req.params.orderID
     });
   });
 
