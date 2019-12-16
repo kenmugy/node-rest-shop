@@ -11,10 +11,18 @@ app.use('/products', products);
 app.use('/orders', orders);
 
 app.use((req, res, next) => {
-  res.status(200).json({
-    message: 'it works'
+  const err = new Error('Sorry, Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.json({
+    error: {
+      message: err.message
+    }
   });
-  next();
 });
 
 module.exports = app;

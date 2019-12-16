@@ -1,6 +1,6 @@
 get http://localhost:1212
 ###
-get http://localhost:1212/products/boice
+get http://localhost:1212/products/noice
 ###
 get http://localhost:1212/products
 ###
