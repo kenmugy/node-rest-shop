@@ -5,7 +5,18 @@ get http://localhost:1212/products/noice
 get http://localhost:1212/products
 ###
 POST http://localhost:1212/products
+Content-Type: application/json
+
+{
+    "name": "apple pie",
+    "price": 23000
+}
 ###
 delete http://localhost:1212/orders/123
 ###
 POST http://localhost:1212/orders
+Content-Type: application/json
+
+{
+    
+}

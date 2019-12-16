@@ -8,8 +8,13 @@ module.exports = () => {
   });
 
   router.post('/', (req, res) => {
-    res.status(200).json({
-      message: 'handling POST reqs for /products'
+    const product = {
+      name: req.body.name,
+      price: req.body.price
+    };
+    res.status(201).json({
+      message: 'producted was created',
+      createdProduct: product
     });
   });
 
