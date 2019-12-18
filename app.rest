@@ -2,17 +2,32 @@ get http://localhost:1212
 ###
 get http://localhost:1212/products
 ###
-get http://localhost:1212/products/5df8060116caa659d0d65e1f
+get http://localhost:1212/products/5dfa64492ffc2582a4805d1e
 ###
 POST http://localhost:1212/products
 Content-Type: application/json
 
 {
-    "name": "rich dad Poor dad",
-    "price": 10000
+    "name": "sweet jamaica",
+    "price": 78000
 }
 ###
-delete http://localhost:1212/orders/123
+put http://localhost:1212/products/5dfa64492ffc2582a4805d1e
+Content-Type: application/json
+
+{
+    "name": "sweet splits jamaica",
+    "price": 100000
+}
+###
+PATCH  http://localhost:1212/products/5dfa64492ffc2582a4805d1e
+Content-Type: application/json
+
+{
+    "name": "juma man swett pupu"
+}
+###
+delete http://localhost:1212/localhost:1212/products/5dfa64492ffc2582a4805d1e
 ###
 POST http://localhost:1212/orders
 Content-Type: application/json

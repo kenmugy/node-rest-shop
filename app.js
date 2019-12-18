@@ -5,7 +5,7 @@ const config = require('config');
 
 const app = express();
 const dbconfig = config.get('product.dbConfig');
-const Product = require('./api/models/product');
+const Product = require('./api/models/productModel');
 
 const products = require('./api/routes/products')(Product);
 const orders = require('./api/routes/orders')();
