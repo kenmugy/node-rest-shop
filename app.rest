@@ -2,7 +2,7 @@ get http://localhost:1212
 ###
 get http://localhost:1212/products
 ###
-get http://localhost:1212/products/5dfa64492ffc2582a4805d1e
+get http://localhost:1212/products/5df8d32108e0067c1460b266
 ###
 POST http://localhost:1212/products
 Content-Type: application/json
@@ -12,22 +12,22 @@ Content-Type: application/json
     "price": 78000
 }
 ###
-put http://localhost:1212/products/5dfa64492ffc2582a4805d1e
+put http://localhost:1212/products/5df8d32108e0067c1460b266
 Content-Type: application/json
 
 {
-    "name": "sweet splits jamaica",
-    "price": 100000
+    "name": "jaja woman 2",
+    "price": 4600
 }
 ###
-PATCH  http://localhost:1212/products/5dfa64492ffc2582a4805d1e
+PATCH  http://localhost:1212/products/5df8d32108e0067c1460b266
 Content-Type: application/json
 
 {
-    "name": "juma man swett pupu"
+    "name": "jaja woman 2.1"
 }
 ###
-delete http://localhost:1212/localhost:1212/products/5dfa64492ffc2582a4805d1e
+delete http://localhost:1212/products/5df8d32108e0067c1460b266
 ###
 POST http://localhost:1212/orders
 Content-Type: application/json

@@ -77,13 +77,13 @@ module.exports = Product => {
         res.send(error);
       }
     })
-    .delete((req, res) => {
-      req.product.deleteOne(err => {
-        if (err) {
-          return res.send(err);
-        }
-        return res.sendStatus(204);
-      });
+    .delete(async (req, res) => {
+      try {
+        await req.product.remove();
+        res.sendStatus(204)
+      } catch (error) {
+        console.log(error)
+      }
     });
 
   return router;
