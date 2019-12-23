@@ -8,8 +8,7 @@ POST http://localhost:1212/products
 Content-Type: application/json
 
 {
-    "name": "sweet jamaica",
-    "price": 78000
+    "name": "aim jooker"
 }
 ###
 put http://localhost:1212/products/5df8d32108e0067c1460b266
