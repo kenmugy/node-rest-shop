@@ -3,11 +3,19 @@ module.exports = Product => {
 
   router.get('/', async (req, res) => {
     try {
-      const products = await Product.find().select('name price _id');
+      const products = await Product.find().select('name price id');
+      const respo = products.map(product => {
+        return {
+          name: product.name,
+          price: product.price,
+          id: product.id,
+          url: `http://localhost:1212/products/${product.id}`
+        };
+      });
       res.status(200).json({
         message: 'handling GET reqs for /products',
         count: products.length,
-        products
+        products: respo
       });
     } catch (error) {
       console.log(error);
